@@ -22,7 +22,7 @@ var myTweets = function() {
 
 	// Twitter API parameters
 	var params = {
-		screen_name: 'GiantGreenLion',
+		screen_name: 'LilBearPrat',
 		count: 20
 	};
 
@@ -78,9 +78,9 @@ var movieThis = function(movieQuery) {
 	// Load request npm module
 	var request = require("request");
 
-	// if query that is passed in is undefined, Mr. Nobody becomes the default
+	// if query that is passed in is undefined, The Matrix becomes the default
 	if(movieQuery === undefined) {
-		movieQuery = "mr nobody";
+		movieQuery = "The Matrix";
 	}
 
 	// HTTP GET request

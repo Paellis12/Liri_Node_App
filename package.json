@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Paellis12/Liri_Node_App#readme",
   "dependencies": {
+    "dotenv": "^7.0.0",
+    "moment": "^2.24.0",
     "request": "^2.81.0",
     "spotify": "^0.3.0",
-    "twitter": "^1.7.0"
+    "twitter": "^1.7.1"
   }
 }
