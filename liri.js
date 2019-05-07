@@ -1,6 +1,7 @@
 // Load exports from keys.js file which has Twitter auth keys
 var keys = require("./keys.js");
 var twitterCredentials = keys.twitterKeys;
+var dotenv = require("dotenv").config();
 
 // node liri.js [ command ] [ query - optional ]
 var command = process.argv[2];
@@ -22,7 +23,7 @@ var myTweets = function() {
 
 	// Twitter API parameters
 	var params = {
-		screen_name: 'LilBearPrat',
+		screen_name: 'random',
 		count: 20
 	};
 
@@ -43,6 +44,7 @@ var myTweets = function() {
 	});
 }
 
+								/*
 var spotifyThisSong = function(trackQuery) {
 	// Load Spotify npm package
 	var spotify = require('spotify');
@@ -73,6 +75,23 @@ var spotifyThisSong = function(trackQuery) {
 	 		
 	});
 }
+
+																	*/
+
+var Spotify = require('node-spotify-api');
+ 
+var spotify = new Spotify({
+  id: console.log(process.env.SPOTIFY_ID),
+  secret: console.log(process.env.SPOTIFY_SECRET)
+});
+ 
+spotify.search({ type: 'track', query: 'The Metal' }, function(err, data) {
+  if (err) {
+    return console.log('Error occurred: ' + err);
+  }
+ 
+console.log(data); 
+});
 
 var movieThis = function(movieQuery) {
 	// Load request npm module
